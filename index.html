@@ -1,0 +1,525 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+  <meta name="generator" content="Hugo 0.72.0">
+  <title>Dashboard Template · Bootstrap</title>
+
+  <link rel="canonical" href="https://v5.getbootstrap.com/docs/5.0/examples/dashboard/">
+  <link rel="stylesheet" href="./SRC/STYLES/style.css">
+
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
+    integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+  
+  
+    <script src="./SRC/APP/bootstrap.js"></script>
+    <script src="./SRC/APP/popper.js"></script>
+
+
+</head>
+
+<body>
+
+  <nav class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
+    <a class="navbar-brand col-md-3 col-lg-2 mr-0 px-3" href="#">RHR Pensiones</a>
+    <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-toggle="collapse"
+      data-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <input class="form-control form-control-dark w-100" type="text" placeholder="..." aria-label="Search">
+    <ul class="navbar-nav px-3">
+      <li class="nav-item text-nowrap">
+        <a class="nav-link" href="#">Sign out</a>
+      </li>
+    </ul>
+  </nav>
+
+  <div class="container-fluid">
+    <div class="row">
+      <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
+        <div class="position-sticky pt-3">
+          <ul class="nav flex-column">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">
+                <span data-feather="home"></span>
+                Proyección 
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <span data-feather="file"></span>
+                CSP
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <span data-feather="shopping-cart"></span>
+                Config
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <span data-feather="users"></span>
+                Clientes
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <span data-feather="bar-chart-2"></span>
+                Reportes
+              </a>
+            </li>
+          </ul>
+
+          <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
+            <span>Reportes Guardados</span>
+            <a class="link-secondary" href="#" aria-label="Add a new report">
+              <span data-feather="plus-circle"></span>
+            </a>
+          </h6>
+          <ul class="nav flex-column mb-2">
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <span data-feather="file-text"></span>
+                Mes actual
+              </a>
+            </li>
+            
+          </ul>
+        </div>
+      </nav>
+
+      <main class="col-md-9 ml-sm-auto col-lg-10 px-md-4">
+        <div
+          class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+          <h1 class="h2">Proyección</h1>
+          <div class="btn-toolbar mb-2 mb-md-0">
+            <div class="btn-group mr-2">
+              <button type="button" class="btn btn-sm btn-outline-secondary">Imprimir</button>
+            </div>
+          </div>
+        </div>
+        <div class="row d-flex">
+          <div class="col-md-6 mb-2">
+            <label for="fechaDeElaboracion" class="form-label">Fecha de elaboracion</label>
+            <input type="date" class="form-control required" id="fechaDeElaboracion" >
+          </div>
+          
+          <div class="col-md-6 mb-2">
+            <label for="nombreAsegurado" class="form-label">Nombre del Asegurado</label>
+            <input type="text" class="form-control required" id="nombreAsegurado" >
+          </div>
+
+          <div class="col-md-3 mb-2">
+            <label for="sesuroSocial" class="form-label">Seguro Social</label>
+            <input type="text" class="form-control required" id="sesuroSocial" >
+          </div>
+
+          <div class="col-md-3 mb-2">
+            <label for="curp" class="form-label">Curp</label>
+            <input type="text" class="form-control required" id="Curp" >
+          </div>
+
+          <div class="col-md-3 mb-2">
+            <label for="semanasCotizadas" class="form-label">Semanas Cotizadas</label>
+            <input type="number" class="form-control required" id="semanasCotizadas" >
+          </div>
+
+          <div class="col-md-3 mb-2">
+            <label for="fechaRepMod40" class="form-label">Fecha Ref. Alta/M40</label>
+            <input type="number" class="form-control required" id="semanasCotizadas" >
+          </div>
+
+          <div class="row col-md-6 mb-2 mt-2">
+            <div class="mb-2 col-md-3">
+              <label for="esposa" class="form-label">Esposa</label>
+              <select class="form-select" aria-label="esposa" id="esposa">
+                <option selected>Selecciona</option>
+                <option >Si</option>
+                <option >No</option>
+              </select>
+            </div>
+            <div class="mb-2 col-md-3">
+              <label for="Hijos" class="form-label">Hijos</label>
+              <input type="number" class="form-control required" id="hijos" >
+            </div>
+            <div class="mb-2 col-md-3">
+              <label for="padres" class="form-label">Padres</label>
+              <input type="number" class="form-control required" id="padres" >
+            </div>
+            <div class="mb-2 col-md-3">
+              <label for="sexo" class="form-label">Sexo</label>
+              <input type="text" class="form-control required" id="sexo" >
+            </div>
+          </div>
+
+          <div class="row col-md-6 mb-2 mt-2">
+            <div class="mb-2 col-md-4">
+              <label for="semdxp" class="form-label">SEMDxP</label>
+              <input type="number" class="form-control required" id="semdxp" >
+            </div>
+            <div class="mb-2 col-md-4">
+              <label for="fBajaVigDer" class="form-label">F/Baja Vig Der</label>
+              <input type="date" class="form-control required" id="fBajaVigDer" >
+            </div>
+            <div class="mb-2 col-md-4">
+              <label for="vigenciaDerechos" class="form-label">Vigencia Derechos</label>
+              <input type="date" class="form-control required" id="vigenciaDerechos" >
+            </div>
+          </div>
+
+          <div class="card" >
+            <div class="card-body">
+              <div class="row col-md-12 mb-4 border-bottom">
+                <h5 class="card-title col-md-6">Fecha de Nacimiento</h5>
+                <h5 class="card-text col-md-6">sábado, 11 de noviembre de 1961</h5>
+              </div>
+              <div class="row">
+                <div class="col-md-3 mb-2">
+                  <h5 class="card-title">Edad Actual</h5>
+                  <p class="card-text">61.9</p>
+                </div>
+                <div class="col-md-3 mb-2">
+                  <h5 class="card-title">SMG DEL 2023</h5>
+                  <p class="card-text">$198.80</p>
+                </div>
+                <div class="col-md-3 mb-2">
+                  <h5 class="card-title">UMA DEL 2023</h5>
+                  <p class="card-text">$101.99</p>
+                </div>
+                <div class="col-md-3 mb-2">
+                  <h5 class="card-title">SALARIO DIARIO PROMEDIO (ULTIMAS 250 SEM.)</h5>
+                  <p class="card-text">$335.08</p>
+                </div>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+        
+        <div class="table-responsive mt-4">
+          <table class="table table-striped table-sm table-hover table-bordered">
+            <thead>
+              <tr>
+                <th colspan="13" class="bg-dark text-light text-center">PROYECCIÓN DE PENSION APROXIMADA CON LA INFORMACION PROPORCIONADA POR EL ASEGURADO</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>VECES SALARIO MINIMO</td>
+                <td></td>
+                <td></td>
+                <td>12</td>
+                <td>18</td>
+                <td>18</td>
+                <td>18</td>
+                <td>24</td>
+                <td>18</td>
+                <td>30</td>
+                <td>18</td>
+                <td>36</td>
+                <td>18</td>
+              </tr>
+              <tr>
+                <td>SALARIO DIARIO DE COTIZ.</td>
+                <td></td>
+                <td></td>
+                <td>$1,835.82</td>
+                <td></td>
+                <td>$1,835.82</td>
+                <td></td>
+                <td>$1,835.82</td>
+                <td></td>
+                <td>$1,835.82</td>
+                <td></td>
+                <td>$1,835.82</td>
+              </tr>
+              <tr>
+                <td>CUOTAS POR MES DEL </td>
+                <td>2023</td>
+                <td></td>
+                <td>1.0</td>
+                <td>$6,231.62</td>
+                <td>1.0</td>
+                <td>$6,231.62</td>
+                <td>1.0</td>
+                <td>$6,231.62</td>
+                <td>1.0</td>
+                <td>$6,231.62</td>
+                <td>1.0</td>
+                <td>$6,231.62</td>
+              </tr>
+              <tr>
+                <td>CUOTAS POR MES DEL </td>
+                <td>2024</td>
+                <td></td>
+                <td>11.0</td>
+                <td>$6,389.94</td>
+                <td>12.0</td>
+                <td>$6,389.94</td>
+                <td>12.0</td>
+                <td>$6,389.94</td>
+                <td>12.0</td>
+                <td>$6,389.94</td>
+                <td>12.0</td>
+                <td>$6,389.94</td>
+              </tr>
+              <tr>
+                <td>CUOTAS POR MES DEL </td>
+                <td>2025</td>
+                <td></td>
+                <td>0.0</td>
+                <td>$ --</td>
+                <td>5.0</td>
+                <td>$7,448.82</td>
+                <td>11.0</td>
+                <td>$7,448.82</td>
+                <td>12.0</td>
+                <td>$7,448.82</td>
+                <td>12.0</td>
+                <td>$7,448.82</td>
+              </tr>
+              <tr>
+                <td>CUOTAS POR MES DEL </td>
+                <td>2026</td>
+                <td></td>
+                <td>0.0</td>
+                <td>$ --</td>
+                <td>0.0</td>
+                <td>$ --</td>
+                <td>0.0</td>
+                <td>$ --</td>
+                <td>5.0</td>
+                <td>$8,057.69</td>
+                <td>11.0</td>
+                <td>$8,057.69</td>
+              </tr>
+              <tr>
+                <td>CUOTAS POR MES DEL </td>
+                <td>2027</td>
+                <td></td>
+                <td>0.0</td>
+                <td>$ --</td>
+                <td>0.0</td>
+                <td>$ --</td>
+                <td>0.0</td>
+                <td>$ --</td>
+                <td>0.0</td>
+                <td>$ --</td>
+                <td>0.0</td>
+                <td>$ --</td>
+              </tr>
+              <tr>
+                <td>CUOTAS POR MES DEL </td>
+                <td>2028</td>
+                <td></td>
+                <td>0.0</td>
+                <td>$ --</td>
+                <td>0.0</td>
+                <td>$ --</td>
+                <td>0.0</td>
+                <td>$ --</td>
+                <td>0.0</td>
+                <td>$ --</td>
+                <td>0.0</td>
+                <td>$ --</td>
+              </tr>
+              <tr>
+                <td>VECES/PAGO M40</td>
+                <td></td>
+                <td>NADA</td>
+                <td colspan="2">12 PAGOS</td>
+                <td colspan="2">18 PAGOS</td>
+                <td colspan="2">24 PAGOS</td>
+                <td colspan="2">30 PAGOS</td>
+                <td colspan="2">36 PAGOS</td>
+              </tr>
+              <tr>
+                <td>EDAD REAL DE RETIRO</td>
+                <td></td>
+                <td>NADA</td>
+                <td colspan="2">62.0</td>
+                <td colspan="2">62.0</td>
+                <td colspan="2">62.0</td>
+                <td colspan="2">62.0</td>
+                <td colspan="2">62.0</td>
+              </tr>
+              <tr>
+                <td>SEMANAS RECON.</td>
+                <td>SI</td>
+                <td></td>
+                <td colspan="2">63</td>
+                <td colspan="2">63</td>
+                <td colspan="2">63</td>
+                <td colspan="2">63</td>
+                <td colspan="2">63</td>
+              </tr>
+              <tr>
+                <td>SALARIO PROMEDIO</td>
+                <td></td>
+                <td>NADA</td>
+                <td colspan="2">750</td>
+                <td colspan="2">750</td>
+                <td colspan="2">750</td>
+                <td colspan="2">750</td>
+                <td colspan="2">750</td>
+              </tr>
+              <tr>
+                <td>PENS.MENS. TOTAL</td>
+                <td></td>
+                <td>NADA</td>
+                <td colspan="2">$950.86</td>
+                <td colspan="2">$950.86</td>
+                <td colspan="2">$950.86</td>
+                <td colspan="2">$950.86</td>
+                <td colspan="2">$950.86</td>
+              </tr>
+              <tr>
+                <td>PENS. GARANTIZADA</td>
+                <td></td>
+                <td>NADA</td>
+                <td colspan="2">$5,623.00</td>
+                <td colspan="2">$5,623.00</td>
+                <td colspan="2">$5,623.00</td>
+                <td colspan="2">$5,623.00</td>
+                <td colspan="2">$5,623.00</td>
+              </tr>
+              <tr>
+                <td>PENS. PAG. PREST.</td>
+                <td></td>
+                <td>NADA</td>
+                <td colspan="2">$5,410.23</td>
+                <td colspan="2">$5,410.23</td>
+                <td colspan="2">--</td>
+                <td colspan="2">--</td>
+                <td colspan="2">--</td>
+              </tr>
+              <tr>
+                <td>FECHA BAJA IMSS</td>
+                <td></td>
+                <td>NADA</td>
+                <td colspan="2">30/11/2023</td>
+                <td colspan="2">30/11/2023</td>
+                <td colspan="2">30/11/2023</td>
+                <td colspan="2">30/11/2023</td>
+                <td colspan="2">30/11/2023</td>
+              </tr>
+              <tr>
+                <td>FECHA/ALTA M40</td>
+                <td></td>
+                <td>NADA</td>
+                <td colspan="2"></td>
+                <td colspan="2">01/12/2023</td>
+                <td colspan="2">01/12/2023</td>
+                <td colspan="2">01/12/2023</td>
+                <td colspan="2">01/12/2023</td>
+              </tr>
+              <tr>
+                <td>FECHA/BAJA M40</td>
+                <td></td>
+                <td>NADA</td>
+                <td colspan="2">30/11/2024</td>
+                <td colspan="2">30/11/2024</td>
+                <td colspan="2">30/11/2024</td>
+                <td colspan="2">30/11/2024</td>
+                <td colspan="2">30/11/2024</td>
+              </tr>
+              <tr>
+                <td>FECHA SOLIC. PENS.</td>
+                <td></td>
+                <td>NADA</td>
+                <td colspan="2">04/12/2024</td>
+                <td colspan="2">04/12/2024</td>
+                <td colspan="2">04/12/2024</td>
+                <td colspan="2">04/12/2024</td>
+                <td colspan="2">04/12/2024</td>
+              </tr>
+              
+            </tbody>
+          </table>
+        </div>
+
+        <div class="table-responsive mt-4">
+          <table class="table table-striped table-sm table-hover table-bordered">
+            <thead>
+              <tr>
+                <th colspan="12" class="bg-dark text-light text-center">ANALISIS DE INVERSIÓN</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>PAGOS A MOD 40</td>
+                <td>$ 81,470.99</td>
+                <td>$ 81,470.99</td>
+                <td>$ 81,470.99</td>
+                <td>$ 81,470.99</td>
+                <td>$ 81,470.99</td>
+              </tr>
+              <tr>
+                <td>RECUPERA POR AFORE</td>
+                <td>$ 81,470.99</td>
+                <td>$ 81,470.99</td>
+                <td>$ 81,470.99</td>
+                <td>$ 81,470.99</td>
+                <td>$ 81,470.99</td>
+              </tr>
+              <tr>
+                <td>INVER A REC X PENSION</td>
+                <td>$ 81,470.99</td>
+                <td>$ 81,470.99</td>
+                <td>$ 81,470.99</td>
+                <td>$ 81,470.99</td>
+                <td>$ 81,470.99</td>
+              </tr>
+              <tr>
+                <td>SE DEJA DE RECIBIR</td>
+                <td>$ 81,470.99</td>
+                <td>$ 81,470.99</td>
+                <td>$ 81,470.99</td>
+                <td>$ 81,470.99</td>
+                <td>$ 81,470.99</td>
+              </tr>
+              <tr>
+                <td>TOTAL INVERSION</td>
+                <td>$ 81,470.99</td>
+                <td>$ 81,470.99</td>
+                <td>$ 81,470.99</td>
+                <td>$ 81,470.99</td>
+                <td>$ 81,470.99</td>
+              </tr>
+              <tr>
+                <td>TIEMPO RECUPERA INVERSION</td>
+                <td>26 MESES</td>
+                <td>26 MESES</td>
+                <td>26 MESES</td>
+                <td>26 MESES</td>
+                <td>26 MESES</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        
+      </main>
+    </div>
+  </div>
+
+
+  <script src="/docs/5.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-DBjhmceckmzwrnMMrjI7BvG2FmRuxQVaTfFYHgfnrdfqMhxKt445b7j3KBQLolRl"
+    crossorigin="anonymous"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.24.1/feather.min.js"
+    integrity="sha384-EbSscX4STvYAC/DxHse8z5gEDaNiKAIGW+EpfzYTfQrgIlHywXXrM9SUIZ0BlyfF"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"
+    integrity="sha384-i+dHPTzZw7YVZOx9lbH5l6lP74sLRtMtwN2XjVqjf3uAGAREAF4LMIUDTWEVs4LI"
+    crossorigin="anonymous"></script>
+  <script src="dashboard.js"></script>
+</body>
+
+</html>
